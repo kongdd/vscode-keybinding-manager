@@ -12,33 +12,6 @@
         "command": "-extension.copyGitHubLinkToClipboard"
     },
 
-
-
-
-    {
-        "key": "ctrl+enter",
-        "command": "quarto.runCurrentCell",
-        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
-    },
-    {
-        "key": "ctrl+shift+enter",
-        "command": "-quarto.runCurrentCell",
-        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
-    },
-    {
-        "key": "ctrl+shift+alt+p",
-        "command": "-quarto.runCellsAbove",
-        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "quarto.renderHTML",
-        "when": "editorLangId == 'qmd' "
-    },
-    {
-        "key": "ctrl+shift+i",
-        "command": "-quarto.insertCodeCell"
-    },
     {
         "key": "ctrl+enter",
         "command": "-editor.action.insertLineAfter",
@@ -54,18 +27,6 @@
         "key": "ctrl+r",
         "command": "-workbench.action.gotoSymbol"
     },
-
-
-    {
-        "key": "ctrl+shift+m",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == 'julia'",
-        "args": {
-            "snippet": "|> "
-        }
-    },
-
-
     {
         "key": "f12",
         "command": "-editor.action.goToDeclaration"
@@ -190,16 +151,7 @@
         "key": "ctrl+\\",
         "command": "-workbench.action.splitEditor"
     },
-    {
-        "key": "ctrl+r",
-        "command": "language-julia.executeCodeBlockOrSelectionAndMove",
-        "when": "editorTextFocus && activeEditor != 'workbench.editor.notebook' && editorLangId in 'julia.supportedLanguageIds'"
-    },
-    {
-        "key": "shift+enter",
-        "command": "-language-julia.executeCodeBlockOrSelectionAndMove",
-        "when": "editorTextFocus && activeEditor != 'workbench.editor.notebook' && editorLangId in 'julia.supportedLanguageIds'"
-    },
+
     {
         "key": "ctrl+alt+j",
         "command": "-code-runner.runByLanguage"
@@ -209,11 +161,7 @@
         "command": "-editor.action.insertSnippet",
         "when": "editorTextFocus && !editorReadonly && editorLangId == 'powershell'"
     },
-    {
-        "key": "ctrl+shift+u",
-        "command": "-workbench.action.output.toggleOutput",
-        "when": "workbench.panel.output.active"
-    },
+
     {
         "key": "ctrl+r",
         "command": "-workbench.action.openRecent"
@@ -233,37 +181,7 @@
         "command": "-telesoho.MarkdownPaste",
         "when": "editorTextFocus && resourceLangId == 'markdown'"
     },
-    {
-        "key": "ctrl+up",
-        "command": "cursorMove",
-        "args": {
-            "to": "up",
-            "by": "line",
-            "value": 10
-        },
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+down",
-        "command": "cursorMove",
-        "args": {
-            "to": "down",
-            "by": "line",
-            "value": 10
-        },
-        "when": "editorTextFocus"
-    },
 
-    {
-        "key": "backspace",
-        "command": "-typst.extension.onBackspaceKey",
-        "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !typst.extension.editor.cursor.inFencedCodeBlock && !typst.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && vim.mode != 'CommandlineInProgress' && vim.mode != 'EasyMotionInputMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'Normal' && vim.mode != 'Replace' && vim.mode != 'SearchInProgressMode' && vim.mode != 'SurroundInputMode' && vim.mode != 'Visual' && vim.mode != 'VisualBlock' && vim.mode != 'VisualLine' && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
-    {
-        "key": "enter",
-        "command": "-typst.extension.onEnterKey",
-        "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !typst.extension.editor.cursor.inFencedCodeBlock && !typst.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && vim.mode != 'CommandlineInProgress' && vim.mode != 'EasyMotionInputMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'Normal' && vim.mode != 'Replace' && vim.mode != 'SearchInProgressMode' && vim.mode != 'SurroundInputMode' && vim.mode != 'Visual' && vim.mode != 'VisualBlock' && vim.mode != 'VisualLine' && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
     {
         "key": "alt+down",
         "command": "workbench.action.splitEditorDown"
@@ -282,32 +200,6 @@
         "key": "f12",
         "command": "-goToNextReference",
         "when": "inReferenceSearchEditor || referenceSearchVisible"
-    },
-
-    {
-        "key": "ctrl+shift+enter",
-        "command": "-quarto.runCurrentCell",
-        "when": "activeCustomEditorId == 'quarto.visualEditor'"
-    },
-    {
-        "key": "ctrl+shift+g",
-        "command": "-workbench.view.scm",
-        "when": "workbench.scm.active"
-    },
-    {
-        "key": "ctrl+enter",
-        "command": "-quarto.runCurrent",
-        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "quarto.runSelection",
-        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
-    },
-    {
-        "key": "alt+enter",
-        "command": "-quarto.runSelection",
-        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
     },
     {
         "key": "ctrl+shift+c",
@@ -344,24 +236,6 @@
         "when": "editorFocus && findWidgetVisible"
     },
 
-    {
-        "key": "ctrl+r",
-        "command": "matlab.runSelection",
-        "when": "editorHasSelection && editorTextFocus && !editorHasMultipleSelections && !findInputFocussed && !replaceInputFocussed && editorLangId == 'matlab'"
-    },
-    {
-        "key": "shift+enter",
-        "command": "-matlab.runSelection",
-        "when": "editorHasSelection && editorTextFocus && !editorHasMultipleSelections && !findInputFocussed && !replaceInputFocussed && editorLangId == 'matlab'"
-    },
-    {
-        "key": "alt+m",
-        "command": "editor.action.insertSnippet",
-        "when": "editorLangId == 'typst'",
-        "args": {
-            "snippet": "#[@]"
-        }
-    },
     {
         "key": "shift+enter",
         "command": "workbench.action.files.openFileWithDefaultApplication"

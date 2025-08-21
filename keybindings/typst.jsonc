@@ -1,10 +1,28 @@
 // Keep extension contributes.keybindings here. Comments allowed.
 [
+    {
+        "key": "alt+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId == 'typst'",
+        "args": {
+            "snippet": "#[@]"
+        }
+    },
+    {
+        "key": "backspace",
+        "command": "-typst.extension.onBackspaceKey",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !typst.extension.editor.cursor.inFencedCodeBlock && !typst.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && vim.mode != 'CommandlineInProgress' && vim.mode != 'EasyMotionInputMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'Normal' && vim.mode != 'Replace' && vim.mode != 'SearchInProgressMode' && vim.mode != 'SurroundInputMode' && vim.mode != 'Visual' && vim.mode != 'VisualBlock' && vim.mode != 'VisualLine' && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
+    },
+    {
+        "key": "enter",
+        "command": "-typst.extension.onEnterKey",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !typst.extension.editor.cursor.inFencedCodeBlock && !typst.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && vim.mode != 'CommandlineInProgress' && vim.mode != 'EasyMotionInputMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'Normal' && vim.mode != 'Replace' && vim.mode != 'SearchInProgressMode' && vim.mode != 'SurroundInputMode' && vim.mode != 'Visual' && vim.mode != 'VisualBlock' && vim.mode != 'VisualLine' && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
+    },
     // 加粗
     {
         "command": "typst.extension.editing._wrapBy",
         "key": "ctrl+b",
-        "when": "editorLangId =~ /^(typst)$/", 
+        "when": "editorLangId =~ /^(typst)$/",
         "args": {
             "before": "*",
             "after": "*"
@@ -29,7 +47,7 @@
             "before": "#underline[",
             "after": "]"
         }
-    }, 
+    },
     // 黄色高亮
     {
         "key": "alt+y",

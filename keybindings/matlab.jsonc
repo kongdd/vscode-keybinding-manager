@@ -1,0 +1,12 @@
+[
+    {
+        "key": "ctrl+r",
+        "command": "matlab.runSelection",
+        "when": "editorHasSelection && editorTextFocus && !editorHasMultipleSelections && !findInputFocussed && !replaceInputFocussed && editorLangId == 'matlab'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-matlab.runSelection",
+        "when": "editorHasSelection && editorTextFocus && !editorHasMultipleSelections && !findInputFocussed && !replaceInputFocussed && editorLangId == 'matlab'"
+    },
+]

@@ -14,5 +14,10 @@
     {
         "key": "ctrl+shift+g",
         "command": "vscsm.openInSublimeMerge"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
     }
 ]
