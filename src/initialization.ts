@@ -66,7 +66,7 @@ export async function migrateExistingKeybindings(): Promise<void> {
 
         // 检查是否存在keybindings.json文件
         if (!fs.existsSync(keybindingsPath)) return;
-        
+
         const content = await fs.promises.readFile(keybindingsPath, 'utf8');
         const cleanContent = stripJsonComments(content.trim() || '[]');
         const parsed = JSON.parse(cleanContent);
@@ -89,7 +89,7 @@ export async function migrateExistingKeybindings(): Promise<void> {
 
         const folderPath = config.folderPath + "/backup";
         await fs.promises.mkdir(folderPath, { recursive: true });    // 确保文件夹存在
-        
+
         // 创建keybindings-main.json（用于管理的主文件）
         const mainKeybindingsPath = path.join(folderPath, mainKeybindingsName);
         await fs.promises.copyFile(keybindingsPath, mainKeybindingsPath);
