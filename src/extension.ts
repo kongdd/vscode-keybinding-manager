@@ -1,13 +1,7 @@
 import * as vscode from 'vscode';
-import { syncKeybindings, backupAndSyncKeybindings, mergeKeybindingsFromFolder } from './merge';
-import { restoreKeybindings, restoreOriginalKeybindings } from './backup';
+import { syncKeybindings } from './merge';
 import { watchKeybindingsFiles } from './watcher';
-import {
-    initializeKeybindingsManager,
-    setupKeybindingsFolder,
-    migrateExistingKeybindings,
-    resetKeybindingsManager
-} from './initialization';
+import { setupKeybindingsFolder } from './initialization';
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Keybindings Manager 扩展已激活');
@@ -15,17 +9,10 @@ export function activate(context: vscode.ExtensionContext) {
     let fileWatcher: vscode.Disposable | undefined;
     const initializeWatcher = () => (fileWatcher?.dispose(), fileWatcher = watchKeybindingsFiles());
 
-    // 命令映射
+    // 命令映射 - 极简设计，只保留核心功能
     const commands = {
-        'keybindings-manager.initialize': initializeKeybindingsManager,
         'keybindings-manager.setupFolder': setupKeybindingsFolder,
-        'keybindings-manager.migrate': migrateExistingKeybindings,
-        'keybindings-manager.sync': syncKeybindings,
-        'keybindings-manager.merge': mergeKeybindingsFromFolder, // 合并folder下的jsonc文件
-        'keybindings-manager.backupAndSync': backupAndSyncKeybindings,
-        'keybindings-manager.restore': restoreKeybindings,
-        'keybindings-manager.restoreOriginal': restoreOriginalKeybindings,
-        'keybindings-manager.reset': resetKeybindingsManager
+        'keybindings-manager.sync': syncKeybindings
     };
 
     // 注册所有命令
@@ -48,5 +35,4 @@ export function activate(context: vscode.ExtensionContext) {
     // 初始化
     initializeWatcher();
     context.subscriptions.push({ dispose: () => fileWatcher?.dispose() });
-    // initializeKeybindingsManager().catch(console.error);
 }

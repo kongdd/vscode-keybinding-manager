@@ -10,3 +10,7 @@ tsconfig.json
 .eslintrc.json
 **/*.map
 **/*.ts
+
+keybindings
+.github
+TODO.md
