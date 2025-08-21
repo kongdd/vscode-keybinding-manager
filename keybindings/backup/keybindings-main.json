@@ -1,21 +1,5 @@
 [
     {
-        "key": "ctrl+g ctrl+f",
-        "command": "git.pushForce"
-    },
-    {
-        "key": "ctrl+g ctrl+p",
-        "command": "git.push"
-    },
-    {
-        "key": "ctrl+g ctrl+a",
-        "command": "git.commitAllAmend"
-    },
-    {
-        "key": "ctrl+shift+g",
-        "command": "vscsm.openInSublimeMerge"
-    },
-    {
         "key": "ctrl+l g",
         "command": "-extension.openInGitHub"
     },
@@ -116,88 +100,13 @@
         "command": "-editor.action.insertLineBefore",
         "when": "editorTextFocus && !editorReadonly"
     },
-    {
-        "key": "ctrl+shift+enter",
-        "command": "-r.runCurrentChunk",
-        "when": "editorTextFocus && editorLangId == 'rmd'"
-    },
-    {
-        "key": "ctrl+enter",
-        "command": "-r.runSelection",
-        "when": "editorTextFocus && editorLangId == 'r'"
-    },
-    {
-        "key": "ctrl+enter",
-        "command": "-r.runSelection",
-        "when": "editorTextFocus && editorLangId == 'rmd'"
-    },
-    {
-        "key": "f6",
-        "command": "r.helpPanel.openForSelection"
-    },
-    {
-        "key": "ctrl+enter",
-        "command": "r.runCurrentChunk",
-        "when": "editorTextFocus && editorLangId == 'rmd'"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "r.runSelection",
-        "when": "editorTextFocus && editorLangId =~ /rmd|^r$/"
-    },
+
     {
         "key": "ctrl+r",
         "command": "-workbench.action.gotoSymbol"
     },
-    {
-        "key": "ctrl+shift+l",
-        "command": "r.loadAll",
-        "when": "terminalFocus"
-    },
-    {
-        "description": "run Ipaper::smerge()",
-        "key": "ctrl+alt+g",
-        "command": "r.runCommand",
-        "when": "editorTextFocus",
-        "args": "Ipaper::smerge()"
-    },
-    {
-        "description": "run devtools::check()",
-        "key": "ctrl+alt+e",
-        "command": "r.runCommand",
-        "when": "terminalFocus",
-        "args": "devtools::check()"
-    },
-    {
-        "description": "run devtools::document()",
-        "key": "ctrl+shift+d",
-        "command": "r.runCommand",
-        "when": "terminalFocus",
-        "args": "devtools::document()"
-    },
-    {
-        "description": "run devtools::test()",
-        "key": "ctrl+shift+t",
-        "command": "r.runCommand",
-        "when": "terminalFocus",
-        "args": "devtools::test()"
-    },
-    {
-        "key": "ctrl+alt+d",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId =~ /rmd|r|qmd/",
-        "args": {
-            "snippet": "%do% {\n\t$0\n}"
-        }
-    },
-    {
-        "key": "ctrl+shift+i",
-        "command": "editor.action.insertSnippet",
-        "when": "editorLangId =~ /rmd|r|qmd/",
-        "args": {
-            "snippet": "%in% "
-        }
-    },
+
+
     {
         "key": "ctrl+shift+m",
         "command": "editor.action.insertSnippet",
@@ -206,43 +115,8 @@
             "snippet": "|> "
         }
     },
-    {
-        "key": "ctrl+shift+,",
-        "command": "editor.action.insertSnippet",
-        "when": "editorLangId =~ /rmd|r|qmd/",
-        "args": {
-            "snippet": "%<>% "
-        }
-    },
-    {
-        "key": "ctrl+alt+i",
-        "command": "editor.action.insertSnippet",
-        "when": "editorLangId =~ /rmd|r|qmd/",
-        "args": {
-            "snippet": "```{r}\n$0\n```"
-        }
-    },
-    {
-        "key": "ctrl+alt+s",
-        "command": "editor.action.insertSnippet",
-        "when": "editorLangId =~ /rmd|r|qmd/",
-        "args": {
-            "snippet": "```\n\n```{r}$0"
-        }
-    },
-    {
-        "key": "ctrl+alt+j",
-        "command": "editor.action.insertSnippet",
-        "when": "editorLangId =~ /rmd|r|qmd/",
-        "args": {
-            "snippet": "```{julia}\n$0\n```"
-        }
-    },
-    {
-        "key": "ctrl+shift+enter",
-        "command": "-r.runSourcewithEcho",
-        "when": "editorTextFocus && editorLangId == 'r'"
-    },
+
+
     {
         "key": "f12",
         "command": "-editor.action.goToDeclaration"
@@ -353,40 +227,7 @@
         "key": "ctrl+alt+o",
         "command": "-extension.open"
     },
-    {
-        "key": "ctrl+shift+m",
-        "command": "editor.action.insertSnippet",
-        "when": "editorLangId =~ /rmd|r|qmd/",
-        "args": {
-            "snippet": "%>% "
-        }
-    },
-    {
-        "description": "R-terminal %>%",
-        "key": "ctrl+shift+m",
-        "command": "workbench.action.terminal.sendSequence",
-        "when": "terminalFocus",
-        "args": {
-            "text": "%>% "
-        }
-    },
-    {
-        "description": "R-terminal %<>%",
-        "key": "ctrl+shift+,",
-        "command": "workbench.action.terminal.sendSequence",
-        "when": "terminalFocus",
-        "args": {
-            "text": "%<>% "
-        }
-    },
-    {
-        "key": "ctrl+shift+i",
-        "command": "workbench.action.terminal.sendSequence",
-        "when": "terminalFocus",
-        "args": {
-            "text": "%in% "
-        }
-    },
+
     {
         "key": "ctrl+shift+k",
         "command": "-editor.action.deleteLines",
@@ -463,16 +304,7 @@
         },
         "when": "editorTextFocus"
     },
-    {
-        "key": "ctrl+up",
-        "command": "r.goToPreviousChunk",
-        "when": "editorLangId =~ /rmd|qmd/"
-    },
-    {
-        "key": "ctrl+down",
-        "command": "r.goToNextChunk",
-        "when": "editorLangId =~ /rmd|qmd/"
-    },
+
     {
         "key": "backspace",
         "command": "-typst.extension.onBackspaceKey",
@@ -502,11 +334,7 @@
         "command": "-goToNextReference",
         "when": "inReferenceSearchEditor || referenceSearchVisible"
     },
-    {
-        "key": "ctrl+shift+enter",
-        "when": "editorLangId =~ /r/rmd|qmd/",
-        "command": "r.runAllChunks"
-    },
+
     {
         "key": "ctrl+shift+enter",
         "command": "-quarto.runCurrentCell",
