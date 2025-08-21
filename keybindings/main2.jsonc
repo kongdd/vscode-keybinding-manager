@@ -1,31 +1,19 @@
 [
-    {
-        "key": "ctrl+l g",
-        "command": "-extension.openInGitHub"
-    },
-    {
-        "key": "ctrl+l p",
-        "command": "-extension.openPrGitProvider"
-    },
-    {
-        "key": "ctrl+l c",
-        "command": "-extension.copyGitHubLinkToClipboard"
-    },
+    //// ===== Git/GitHub 扩展相关 =====
+    // {
+    //     "key": "ctrl+l g",
+    //     "command": "-extension.openInGitHub"
+    // },
+    // {
+    //     "key": "ctrl+l p",
+    //     "command": "-extension.openPrGitProvider"
+    // },
+    // {
+    //     "key": "ctrl+l c",
+    //     "command": "-extension.copyGitHubLinkToClipboard"
+    // },
 
-    {
-        "key": "ctrl+enter",
-        "command": "-editor.action.insertLineAfter",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+enter",
-        "command": "-editor.action.insertLineBefore",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.gotoSymbol"
-    },
+    // ===== 编辑器导航和声明 =====
     {
         "key": "f12",
         "command": "-editor.action.goToDeclaration"
@@ -39,17 +27,18 @@
         "command": "editor.action.goToDeclaration"
     },
     {
-        "key": "shift+delete",
-        "command": "editor.action.deleteLines",
-        "when": "editorFocus"
+        "key": "f12",
+        "command": "-editor.gotoNextSymbolFromResult",
+        "when": "hasSymbols"
     },
     {
-        "key": "ctrl+k ctrl+b",
-        "command": "workbench.action.toggleSidebarVisibility"
+        "key": "f12",
+        "command": "-goToNextReference",
+        "when": "inReferenceSearchEditor || referenceSearchVisible"
     },
     {
-        "key": "ctrl+b",
-        "command": "-workbench.action.toggleSidebarVisibility"
+        "key": "ctrl+r",
+        "command": "-workbench.action.gotoSymbol"
     },
     {
         "key": "alt+g",
@@ -59,15 +48,32 @@
         "key": "ctrl+g",
         "command": "-workbench.action.gotoLine"
     },
+
+    // ===== 编辑器操作 =====
+    {
+        "key": "ctrl+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+delete",
+        "command": "editor.action.deleteLines",
+        "when": "editorFocus"
+    },
     {
         "key": "ctrl+shift+k",
         "command": "-editor.action.deleteLines",
         "when": "textInputFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+e",
-        "command": "revealFileInOS",
-        "when": "!editorFocus"
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "editorFocus"
     },
     {
         "key": "alt+d",
@@ -89,32 +95,20 @@
         "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-
     {
-        "key": "shift+alt+3",
-        "command": "alignment.align",
-        "when": "editorHasSelection"
-    },
-    {
-        "key": "alt+oem_plus",
-        "command": "-alignment.align",
-        "when": "editorHasSelection"
-    },
-    {
-        "key": "ctrl+shift+i",
-        "command": "-emojisense.quickEmojitext",
-        "when": "editorTextFocus"
+        "key": "ctrl+u",
+        "command": "-cursorUndo",
+        "when": "textInputFocus"
     },
 
+    // ===== 工作区和窗口操作 =====
     {
-        "key": "ctrl+alt+o",
-        "command": "-extension.open"
+        "key": "ctrl+k ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
     },
-
     {
-        "key": "ctrl+shift+k",
-        "command": "-editor.action.deleteLines",
-        "when": "editorFocus"
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
         "key": "shift+alt+2",
@@ -124,17 +118,19 @@
         "key": "ctrl+\\",
         "command": "-workbench.action.splitEditor"
     },
-
     {
-        "key": "ctrl+alt+j",
-        "command": "-code-runner.runByLanguage"
+        "key": "alt+down",
+        "command": "workbench.action.splitEditorDown"
     },
     {
-        "key": "ctrl+alt+j",
-        "command": "-editor.action.insertSnippet",
-        "when": "editorTextFocus && !editorReadonly && editorLangId == 'powershell'"
+        "key": "alt+l",
+        "command": "workbench.action.moveEditorToNewWindow"
     },
-
+    {
+        "key": "ctrl+shift+m",
+        "command": "-workbench.actions.view.problems",
+        "when": "workbench.panel.markers.view.active"
+    },
     {
         "key": "ctrl+r",
         "command": "-workbench.action.openRecent"
@@ -144,35 +140,12 @@
         "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
         "when": "inQuickOpen && inRecentFilesPicker"
     },
-    {
-        "key": "ctrl+shift+v",
-        "command": "telesoho.MarkdownPaste",
-        "when": "editorTextFocus && resourceLangId == 'markdown'"
-    },
-    {
-        "key": "ctrl+alt+v",
-        "command": "-telesoho.MarkdownPaste",
-        "when": "editorTextFocus && resourceLangId == 'markdown'"
-    },
 
+    // ===== 文件和系统操作 =====
     {
-        "key": "alt+down",
-        "command": "workbench.action.splitEditorDown"
-    },
-    {
-        "key": "ctrl+shift+m",
-        "command": "-workbench.actions.view.problems",
-        "when": "workbench.panel.markers.view.active"
-    },
-    {
-        "key": "f12",
-        "command": "-editor.gotoNextSymbolFromResult",
-        "when": "hasSymbols"
-    },
-    {
-        "key": "f12",
-        "command": "-goToNextReference",
-        "when": "inReferenceSearchEditor || referenceSearchVisible"
+        "key": "ctrl+e",
+        "command": "revealFileInOS",
+        "when": "!editorFocus"
     },
     {
         "key": "ctrl+shift+c",
@@ -189,7 +162,30 @@
         "command": "-workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
     },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "saveAll"
+    },
+    {
+        "key": "ctrl+k s",
+        "command": "-saveAll"
+    },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "-workbench.action.openGlobalKeybindings"
+    },
 
+    // ===== 文本对齐和格式化 =====
+    {
+        "key": "shift+alt+3",
+        "command": "alignment.align",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "alt+oem_plus",
+        "command": "-alignment.align",
+        "when": "editorHasSelection"
+    },
     {
         "key": "shift+alt+c",
         "command": "alignment.alignWhitespace",
@@ -200,34 +196,35 @@
         "command": "-alignment.alignWhitespace",
         "when": "editorHasSelection"
     },
-    {
-        "key": "alt+enter",
-        "command": "-editor.action.selectAllMatches",
-        "when": "editorFocus && findWidgetVisible"
-    },
+
+    // ===== 视图和面板 =====
     {
         "key": "alt+s",
         "command": "outline.focus"
     },
     {
-        "key": "ctrl+k ctrl+s",
-        "command": "-workbench.action.openGlobalKeybindings"
+        "key": "alt+enter",
+        "command": "-editor.action.selectAllMatches",
+        "when": "editorFocus && findWidgetVisible"
+    },
+
+    // ===== 扩展功能禁用 =====
+    {
+        "key": "ctrl+shift+i",
+        "command": "-emojisense.quickEmojitext",
+        "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+k ctrl+s",
-        "command": "saveAll"
+        "key": "ctrl+alt+o",
+        "command": "-extension.open"
     },
     {
-        "key": "ctrl+k s",
-        "command": "-saveAll"
+        "key": "ctrl+alt+j",
+        "command": "-code-runner.runByLanguage"
     },
     {
-        "key": "alt+l",
-        "command": "workbench.action.moveEditorToNewWindow"
-    },
-    {
-        "key": "ctrl+u",
-        "command": "-cursorUndo",
-        "when": "textInputFocus"
+        "key": "ctrl+alt+j",
+        "command": "-editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'powershell'"
     }
 ]

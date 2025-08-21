@@ -1,5 +1,16 @@
 // Keep extension contributes.keybindings here. Comments allowed.
 [
+    // 复制图片
+    {
+        "key": "ctrl+shift+v",
+        "command": "telesoho.MarkdownPaste",
+        "when": "editorTextFocus && resourceLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "-telesoho.MarkdownPaste",
+        "when": "editorTextFocus && resourceLangId == 'markdown'"
+    },
     // 加粗
     {
         "command": "typst.extension.editing.toggleBold",
