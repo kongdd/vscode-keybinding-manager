@@ -1,0 +1,65 @@
+// Keep extension contributes.keybindings here. Comments allowed.
+[
+    // 加粗
+    {
+        "command": "typst.extension.editing.toggleBold",
+        "key": "ctrl+b",
+        "when": "editorLangId =~ /^(rmd|quarto|markdown)$/"
+    },
+    // 删除线
+    {
+        "command": "typst.extension.editing.toggleStrikethrough",
+        "key": "alt+s",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^(rmd|quarto|markdown)$/"
+    }, 
+    // 倾斜
+    {
+        "key": "ctrl+i",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId =~ /^(rmd|quarto|markdown)$/",
+        "args": {
+            "before": "*",
+            "after": "*"
+        }
+    },
+    // 下划线
+    {
+        "key": "ctrl+u",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId =~ /^(rmd|quarto|markdown)$/",
+        "args": {
+            "before": "<u>",
+            "after": "</u>"
+        }
+    },
+    // 居中
+    {
+        "key": "ctrl+e",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId =~ /^(rmd|quarto|markdown)$/",
+        "args": {
+            "before": "<center>",
+            "after": "</center>"
+        }
+    },
+    // markdown 红色字体
+    {
+        "key": "alt+r",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId =~ /^(rmd|quarto|markdown)$/",
+        "args": {
+            "before": "<span style='color:red'>",
+            "after": "</span>"
+        }
+    },
+    // markdown 黄色背景
+    {
+        "key": "alt+y",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId =~ /^(rmd|quarto|markdown)$/",
+        "args": {
+            "before": "<span style='background-color:yellow'>",
+            "after": "</span>"
+        }
+    }
+]

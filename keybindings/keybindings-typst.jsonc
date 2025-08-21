@@ -1,0 +1,53 @@
+// Keep extension contributes.keybindings here. Comments allowed.
+[
+    // 加粗
+    {
+        "command": "typst.extension.editing._wrapBy",
+        "key": "ctrl+b",
+        "when": "editorLangId =~ /^(typst)$/", 
+        "args": {
+            "before": "*",
+            "after": "*"
+        }
+    },
+    // 倾斜
+    {
+        "key": "ctrl+i",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId == 'typst'",
+        "args": {
+            "before": "_",
+            "after": "_"
+        }
+    },
+    // 下划线
+    {
+        "key": "ctrl+u",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId == 'typst'",
+        "args": {
+            "before": "#underline[",
+            "after": "]"
+        }
+    }, 
+    // 黄色高亮
+    {
+        "key": "alt+y",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId == 'typst'",
+        "args": {
+            "before": "#highlight[",
+            "after": "]"
+        }
+    },
+    // 蓝色加粗, 重点表述
+    {
+        "key": "alt+b",
+        "command": "typst.extension.editing._wrapBy",
+        "when": "editorLangId == 'typst'",
+        "args": {
+            "before": "#Blue[",
+            "after": "]"
+        }
+    }
+]

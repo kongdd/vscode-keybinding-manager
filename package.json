@@ -1,0 +1,120 @@
+{
+  "name": "keybindings-manager",
+  "displayName": "Keybindings Manager",
+  "description": "管理多个keybindings文件",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Keymaps"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "keybindings-manager.initialize",
+        "title": "初始化Keybindings管理器", 
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.setupFolder",
+        "title": "设置Keybindings文件夹", 
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.migrate",
+        "title": "迁移现有Keybindings文件",
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.sync",
+        "title": "同步所有Keybindings文件",
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.merge",
+        "title": "合并文件夹下的Keybindings文件",
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.createNew",
+        "title": "创建新的Keybindings文件",
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.backupAndSync",
+        "title": "备份原文件并同步Keybindings",
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.restore",
+        "title": "恢复Keybindings备份文件",
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.restoreOriginal",
+        "title": "恢复原始Keybindings配置",
+        "category": "keybindings manager"
+      },
+      {
+        "command": "keybindings-manager.reset",
+        "title": "重置Keybindings管理器",
+        "category": "keybindings manager"
+      }
+    ],
+    "configuration": {
+      "title": "Keybindings Manager",
+      "properties": {
+        "keybindingsManager.files": {
+          "type": "array",
+          "default": [],
+          "description": "要合并的keybindings文件列表（相对于用户配置目录）"
+        },
+        "keybindingsManager.folder": {
+          "type": "string",
+          "default": "",
+          "description": "要扫描的keybindings文件夹（相对于用户配置目录）"
+        },
+        "keybindingsManager.filePattern": {
+          "type": "string",
+          "default": "*.jsonc",
+          "description": "在文件夹中查找keybindings文件的模式"
+        },
+        "keybindingsManager.autoSync": {
+          "type": "boolean",
+          "default": true,
+          "description": "当keybindings文件变化时自动同步"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack --mode development",
+    "watch": "webpack --watch --mode development",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "test": "npm run compile-tests && node out/test/standalone-test.js",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^14.14.37",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.19.0",
+    "glob": "^10.1.6",
+    "mocha": "^11.7.1",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  }
+}

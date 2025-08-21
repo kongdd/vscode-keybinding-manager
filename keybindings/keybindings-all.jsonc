@@ -1,0 +1,8 @@
+// Keep extension contributes.keybindings here. Comments allowed.
+[
+    {
+        "key": "ctrl+shift+u",
+        "command": "typst.extension.toc.addSecNumbers",
+        "when": "editorLangId =~ /rmd|quarto|markdown|typst/"
+    }
+]

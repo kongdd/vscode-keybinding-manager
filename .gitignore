@@ -1,0 +1,8 @@
+node_modules
+*.vsix
+dist
+out
+
+keybindings
+.vscode-test
+*-lock.json
