@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as vscode from 'vscode';
 import { getUserConfigPath } from './utils';
 import { getExtensionConfig } from './config';
-import { syncKeybindings } from './sync';
+import { syncKeybindings } from './merge';
 
 // 监听文件变化
 export function watchKeybindingsFiles(): vscode.Disposable {

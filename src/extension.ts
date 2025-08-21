@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
-import { syncKeybindings, backupAndSyncKeybindings, mergeKeybindingsFromFolder } from './sync';
-import { createNewKeybindingsFile } from './fileCreator';
+import { syncKeybindings, backupAndSyncKeybindings, mergeKeybindingsFromFolder } from './merge';
 import { restoreKeybindings, restoreOriginalKeybindings } from './backup';
 import { watchKeybindingsFiles } from './watcher';
 import { 
@@ -23,7 +22,6 @@ export function activate(context: vscode.ExtensionContext) {
     'keybindings-manager.migrate': migrateExistingKeybindings,
     'keybindings-manager.sync': syncKeybindings,
     'keybindings-manager.merge': mergeKeybindingsFromFolder, // 合并folder下的jsonc文件
-    'keybindings-manager.createNew': createNewKeybindingsFile,
     'keybindings-manager.backupAndSync': backupAndSyncKeybindings,
     'keybindings-manager.restore': restoreKeybindings,
     'keybindings-manager.restoreOriginal': restoreOriginalKeybindings,
