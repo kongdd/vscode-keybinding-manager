@@ -22,7 +22,6 @@
         "command": "-editor.action.insertLineBefore",
         "when": "editorTextFocus && !editorReadonly"
     },
-
     {
         "key": "ctrl+r",
         "command": "-workbench.action.gotoSymbol"
@@ -90,14 +89,7 @@
         "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-    {
-        "key": "ctrl+n",
-        "command": "extension.simpleNewFile"
-    },
-    {
-        "key": "ctrl+alt+n",
-        "command": "-extension.simpleNewFile"
-    },
+
     {
         "key": "shift+alt+3",
         "command": "alignment.align",
@@ -113,26 +105,7 @@
         "command": "-emojisense.quickEmojitext",
         "when": "editorTextFocus"
     },
-    {
-        "key": "ctrl+c",
-        "command": "workbench.action.terminal.copySelection",
-        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
-    },
-    {
-        "key": "ctrl+shift+c",
-        "command": "-workbench.action.terminal.copySelection",
-        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
-    },
-    {
-        "key": "ctrl+v",
-        "command": "workbench.action.terminal.paste",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "ctrl+shift+v",
-        "command": "-workbench.action.terminal.paste",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-    },
+
     {
         "key": "ctrl+alt+o",
         "command": "-extension.open"
@@ -216,10 +189,7 @@
         "command": "-workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
     },
-    {
-        "key": "alt+enter",
-        "command": "openInExternalApp.open"
-    },
+
     {
         "key": "shift+alt+c",
         "command": "alignment.alignWhitespace",
@@ -234,15 +204,6 @@
         "key": "alt+enter",
         "command": "-editor.action.selectAllMatches",
         "when": "editorFocus && findWidgetVisible"
-    },
-
-    {
-        "key": "shift+enter",
-        "command": "workbench.action.files.openFileWithDefaultApplication"
-    },
-    {
-        "key": "ctrl+alt+o",
-        "command": "-workbench.action.files.openFileWithDefaultApplication"
     },
     {
         "key": "alt+s",

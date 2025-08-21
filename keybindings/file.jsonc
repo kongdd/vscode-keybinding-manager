@@ -1,0 +1,22 @@
+[
+    {
+        "key": "ctrl+n",
+        "command": "extension.simpleNewFile"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-extension.simpleNewFile"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.files.openFileWithDefaultApplication"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "-workbench.action.files.openFileWithDefaultApplication"
+    },
+    {
+        "key": "alt+enter",
+        "command": "openInExternalApp.open"
+    },
+]
