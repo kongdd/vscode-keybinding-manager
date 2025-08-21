@@ -1,0 +1,31 @@
+[
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-r.runCurrentChunk",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-r.runSelection",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-r.runSelection",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "f6",
+        "command": "r.helpPanel.openForSelection"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "r.runCurrentChunk",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "r.runSelection",
+        "when": "editorTextFocus && editorLangId =~ /rmd|^r$/"
+    },
+]

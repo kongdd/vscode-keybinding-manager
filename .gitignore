@@ -3,6 +3,7 @@ node_modules
 dist
 out
 
-keybindings
+# keybindings
 .vscode-test
 *-lock.json
+keybindings/backup/keybindings-backup.json

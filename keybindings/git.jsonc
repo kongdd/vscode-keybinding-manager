@@ -1,0 +1,18 @@
+[
+    {
+        "key": "ctrl+g ctrl+f",
+        "command": "git.pushForce"
+    },
+    {
+        "key": "ctrl+g ctrl+p",
+        "command": "git.push"
+    },
+    {
+        "key": "ctrl+g ctrl+a",
+        "command": "git.commitAllAmend"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "vscsm.openInSublimeMerge"
+    }
+]

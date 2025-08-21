@@ -1,0 +1,624 @@
+[
+    {
+        "key": "ctrl+g ctrl+f",
+        "command": "git.pushForce"
+    },
+    {
+        "key": "ctrl+g ctrl+p",
+        "command": "git.push"
+    },
+    {
+        "key": "ctrl+g ctrl+a",
+        "command": "git.commitAllAmend"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "vscsm.openInSublimeMerge"
+    },
+    {
+        "key": "ctrl+l g",
+        "command": "-extension.openInGitHub"
+    },
+    {
+        "key": "ctrl+l p",
+        "command": "-extension.openPrGitProvider"
+    },
+    {
+        "key": "ctrl+l c",
+        "command": "-extension.copyGitHubLinkToClipboard"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "notebook.cell.execute",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+    },
+    {
+        "key": "ctrl+alt+enter",
+        "command": "-notebook.cell.execute",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "notebook.cell.executeAndInsertBelow",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-notebook.cell.executeAndInsertBelow",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "jupyter.insertCellBelow",
+        "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+oem_1 b",
+        "command": "-jupyter.insertCellBelow",
+        "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "notebook.cell.insertCodeCellBelow",
+        "when": "notebookCellListFocused"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-notebook.cell.insertCodeCellBelow",
+        "when": "notebookCellListFocused && !inputFocus"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "f6",
+        "command": "jupyter.debugcurrentcell.palette",
+        "when": "jupyter.hascodecells"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "quarto.runCurrentCell",
+        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-quarto.runCurrentCell",
+        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+    },
+    {
+        "key": "ctrl+shift+alt+p",
+        "command": "-quarto.runCellsAbove",
+        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "quarto.renderHTML",
+        "when": "editorLangId == 'qmd' "
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-quarto.insertCodeCell"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-r.runCurrentChunk",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-r.runSelection",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-r.runSelection",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "f6",
+        "command": "r.helpPanel.openForSelection"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "r.runCurrentChunk",
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "r.runSelection",
+        "when": "editorTextFocus && editorLangId =~ /rmd|^r$/"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "r.loadAll",
+        "when": "terminalFocus"
+    },
+    {
+        "description": "run Ipaper::smerge()",
+        "key": "ctrl+alt+g",
+        "command": "r.runCommand",
+        "when": "editorTextFocus",
+        "args": "Ipaper::smerge()"
+    },
+    {
+        "description": "run devtools::check()",
+        "key": "ctrl+alt+e",
+        "command": "r.runCommand",
+        "when": "terminalFocus",
+        "args": "devtools::check()"
+    },
+    {
+        "description": "run devtools::document()",
+        "key": "ctrl+shift+d",
+        "command": "r.runCommand",
+        "when": "terminalFocus",
+        "args": "devtools::document()"
+    },
+    {
+        "description": "run devtools::test()",
+        "key": "ctrl+shift+t",
+        "command": "r.runCommand",
+        "when": "terminalFocus",
+        "args": "devtools::test()"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId =~ /rmd|r|qmd/",
+        "args": {
+            "snippet": "%do% {\n\t$0\n}"
+        }
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId =~ /rmd|r|qmd/",
+        "args": {
+            "snippet": "%in% "
+        }
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'julia'",
+        "args": {
+            "snippet": "|> "
+        }
+    },
+    {
+        "key": "ctrl+shift+,",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId =~ /rmd|r|qmd/",
+        "args": {
+            "snippet": "%<>% "
+        }
+    },
+    {
+        "key": "ctrl+alt+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId =~ /rmd|r|qmd/",
+        "args": {
+            "snippet": "```{r}\n$0\n```"
+        }
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId =~ /rmd|r|qmd/",
+        "args": {
+            "snippet": "```\n\n```{r}$0"
+        }
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId =~ /rmd|r|qmd/",
+        "args": {
+            "snippet": "```{julia}\n$0\n```"
+        }
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-r.runSourcewithEcho",
+        "when": "editorTextFocus && editorLangId == 'r'"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.goToDeclaration"
+    },
+    {
+        "key": "f9",
+        "command": "editor.action.revealDeclaration"
+    },
+    {
+        "key": "f9",
+        "command": "editor.action.goToDeclaration"
+    },
+    {
+        "key": "shift+delete",
+        "command": "editor.action.deleteLines",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "alt+g",
+        "command": "workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "revealFileInOS",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "alt+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+u",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "extension.simpleNewFile"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-extension.simpleNewFile"
+    },
+    {
+        "key": "shift+alt+3",
+        "command": "alignment.align",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "alt+oem_plus",
+        "command": "-alignment.align",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-emojisense.quickEmojitext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalTextSelected || terminalFocus && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "-extension.open"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId =~ /rmd|r|qmd/",
+        "args": {
+            "snippet": "%>% "
+        }
+    },
+    {
+        "description": "R-terminal %>%",
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {
+            "text": "%>% "
+        }
+    },
+    {
+        "description": "R-terminal %<>%",
+        "key": "ctrl+shift+,",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {
+            "text": "%<>% "
+        }
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {
+            "text": "%in% "
+        }
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+alt+2",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "language-julia.executeCodeBlockOrSelectionAndMove",
+        "when": "editorTextFocus && activeEditor != 'workbench.editor.notebook' && editorLangId in 'julia.supportedLanguageIds'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-language-julia.executeCodeBlockOrSelectionAndMove",
+        "when": "editorTextFocus && activeEditor != 'workbench.editor.notebook' && editorLangId in 'julia.supportedLanguageIds'"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-code-runner.runByLanguage"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'powershell'"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "-workbench.action.output.toggleOutput",
+        "when": "workbench.panel.output.active"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "telesoho.MarkdownPaste",
+        "when": "editorTextFocus && resourceLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "-telesoho.MarkdownPaste",
+        "when": "editorTextFocus && resourceLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "line",
+            "value": 10
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "line",
+            "value": 10
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "r.goToPreviousChunk",
+        "when": "editorLangId =~ /rmd|qmd/"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "r.goToNextChunk",
+        "when": "editorLangId =~ /rmd|qmd/"
+    },
+    {
+        "key": "backspace",
+        "command": "-typst.extension.onBackspaceKey",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !typst.extension.editor.cursor.inFencedCodeBlock && !typst.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && vim.mode != 'CommandlineInProgress' && vim.mode != 'EasyMotionInputMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'Normal' && vim.mode != 'Replace' && vim.mode != 'SearchInProgressMode' && vim.mode != 'SurroundInputMode' && vim.mode != 'Visual' && vim.mode != 'VisualBlock' && vim.mode != 'VisualLine' && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
+    },
+    {
+        "key": "enter",
+        "command": "-typst.extension.onEnterKey",
+        "when": "editorTextFocus && !editorHasMultipleSelections && !editorReadonly && !typst.extension.editor.cursor.inFencedCodeBlock && !typst.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && vim.mode != 'CommandlineInProgress' && vim.mode != 'EasyMotionInputMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'Normal' && vim.mode != 'Replace' && vim.mode != 'SearchInProgressMode' && vim.mode != 'SurroundInputMode' && vim.mode != 'Visual' && vim.mode != 'VisualBlock' && vim.mode != 'VisualLine' && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
+    },
+    {
+        "key": "alt+down",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "-workbench.actions.view.problems",
+        "when": "workbench.panel.markers.view.active"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.gotoNextSymbolFromResult",
+        "when": "hasSymbols"
+    },
+    {
+        "key": "f12",
+        "command": "-goToNextReference",
+        "when": "inReferenceSearchEditor || referenceSearchVisible"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "when": "editorLangId =~ /r/rmd|qmd/",
+        "command": "r.runAllChunks"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-quarto.runCurrentCell",
+        "when": "activeCustomEditorId == 'quarto.visualEditor'"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-quarto.runCurrent",
+        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "quarto.runSelection",
+        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-quarto.runSelection",
+        "when": "editorTextFocus && !findInputFocussed && !replaceInputFocussed && editorLangId == 'quarto'"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "copyRelativeFilePath",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+c",
+        "command": "-copyRelativeFilePath",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+enter",
+        "command": "openInExternalApp.open"
+    },
+    {
+        "key": "shift+alt+c",
+        "command": "alignment.alignWhitespace",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "alt+oem_minus",
+        "command": "-alignment.alignWhitespace",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-editor.action.selectAllMatches",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "python.execInTerminal-icon"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "matlab.runSelection",
+        "when": "editorHasSelection && editorTextFocus && !editorHasMultipleSelections && !findInputFocussed && !replaceInputFocussed && editorLangId == 'matlab'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-matlab.runSelection",
+        "when": "editorHasSelection && editorTextFocus && !editorHasMultipleSelections && !findInputFocussed && !replaceInputFocussed && editorLangId == 'matlab'"
+    },
+    {
+        "key": "alt+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorLangId == 'typst'",
+        "args": {
+            "snippet": "#[@]"
+        }
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.files.openFileWithDefaultApplication"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "-workbench.action.files.openFileWithDefaultApplication"
+    },
+    {
+        "key": "alt+s",
+        "command": "outline.focus"
+    },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "-workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "saveAll"
+    },
+    {
+        "key": "ctrl+k s",
+        "command": "-saveAll"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.moveEditorToNewWindow"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "-cursorUndo",
+        "when": "textInputFocus"
+    }
+]
