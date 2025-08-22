@@ -3,13 +3,23 @@
 
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
+
+function getUserConfigPath() {
+    const osMap = {
+        darwin: path.join(process.env.HOME || '', 'Library/Application Support'),
+        win32: process.env.APPDATA || ''
+    };
+    return path.join(osMap[process.platform] || '/var/local', 'Code', 'User');
+}
 
 /** @param {string} str */
 function stripJsonComments(str) {
     // minimal stripper for // and /* */ comments
     return str
-        .replace(/\/\*[\s\S]*?\*\//g, '')
-        .replace(/^\s*\/\/.*$/gm, '');
+        .replace(/\/\*[\s\S]*?\*\//g, '')  // 多行注释
+        .replace(/^\s*\/\/.*$/gm, '')      // 单行注释
+        .replace(/,(\s*[}\]])/g, '$1');    // 尾随逗号
 }
 
 /**
@@ -34,24 +44,30 @@ function mergeKeybindings(sources) {
 }
 
 function run() {
-    const root = path.resolve(__dirname, '..');
-    const pkgPath = path.join(root, 'package.json');
+    const indir = path.resolve(__dirname).replace(/\\/g, '/');
+    const dir_root = path.resolve(__dirname, '..');
 
-    const out = path.join(__dirname, 'keybindings.json');
-    const sources = [
-        path.join(__dirname, 'keybindings-all.jsonc'),
-        path.join(__dirname, 'keybindings-md.jsonc'),
-        path.join(__dirname, 'keybindings-typst.jsonc'),
-    ];
+    const out = path.join(dir_root, 'keybindings.json');
 
-    const keys = mergeKeybindings(sources);
+    const userPath = getUserConfigPath();
+    console.log(userPath);
+
+    const pattern = `${indir}/*.jsonc`;
+    const files = glob.sync(pattern);
+
+    const keys = mergeKeybindings(files);
     fs.writeFileSync(out, JSON.stringify(keys, null, 4) + '\n', 'utf8');
-    
-    const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-    pkg.contributes = pkg.contributes || {};
-    pkg.contributes.keybindings = keys;
-    fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 4) + '\n', 'utf8');
     console.log(`[sync-keybindings] Synced ${keys.length} keybindings`);
+
+    // write shortcuts into package.json
+    let inject2pkg = false;
+    if (inject2pkg) {
+        const pkgPath = path.join(dir_root, 'package.json');
+        const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+        pkg.contributes = pkg.contributes || {};
+        pkg.contributes.keybindings = keys;
+        fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 4) + '\n', 'utf8');
+    }
 }
 
 if (require.main === module) run();
