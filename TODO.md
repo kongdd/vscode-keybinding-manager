@@ -1,1 +1,0 @@
-- 首先让用户设置`keybindingsManager.folder`，之后将用户的`keybindings.json`设置为`keybindings-main.json`，拷贝到`keybindingsManager.folder`，同时还需要拷贝一份到`keybindings-backup.json`方便恢复用户配置
