@@ -18,7 +18,6 @@ export function readJsoncFile(filePath: string): KeybindingItem[] {
                 item?.key && item?.command && typeof item.key === 'string' && typeof item.command === 'string')
             : [];
     } catch (error) {
-        console.error(`读取文件失败 ${filePath}:`, error);
         vscode.window.showWarningMessage(`读取文件失败: ${path.basename(filePath)}`);
         return [];
     }

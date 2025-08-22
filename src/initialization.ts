@@ -12,18 +12,19 @@ export async function setupKeybindingsFolder(): Promise<void> {
             placeHolder: 'keybindings 或 D:\\my-keybindings',
             validateInput: (value) => value?.trim() ? undefined : '路径不能为空'
         });
-
+        
         if (!folderPath) return;
 
         const userConfigPath = getUserConfigPath();
-        const actualPath = path.isAbsolute(folderPath) ? folderPath : path.join(userConfigPath, folderPath);
+
+        let actualPath = path.isAbsolute(folderPath) ? folderPath : path.join(userConfigPath, folderPath);
+        actualPath = actualPath.replace(/\\/g, '/');
 
         await fs.promises.mkdir(actualPath, { recursive: true });
 
         const config = vscode.workspace.getConfiguration('keybindingsManager');
-        await config.update('folder', folderPath, vscode.ConfigurationTarget.Global);
+        await config.update('folderPath', actualPath, vscode.ConfigurationTarget.Global);
 
-        vscode.window.showInformationMessage(`已创建keybindings文件夹: ${actualPath}`);
         await migrateExistingKeybindings();
 
     } catch (error) {
