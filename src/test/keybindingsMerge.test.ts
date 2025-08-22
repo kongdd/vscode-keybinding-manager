@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import * as os from 'os';
 import { mergeKeybindings, readJsoncFile } from '../fileOperations';
-import { stripJsonComments } from '../utils';
+import { stripJsonComments } from '../config';
 
 // 使用VS Code测试框架的suite和test函数
 declare function suite(name: string, fn: () => void): void;

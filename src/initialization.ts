@@ -1,8 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { getUserConfigPath, getKeybindingsPath, stripJsonComments } from './utils';
-import { getExtensionConfig } from './config';
+import { getUserConfigPath, getKeybindingsPath, stripJsonComments, getExtensionConfig } from './config';
 
 
 // 设置keybindings文件夹

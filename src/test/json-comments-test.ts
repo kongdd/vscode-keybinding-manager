@@ -7,7 +7,7 @@ import * as path from 'path';
 import * as os from 'os';
 
 // 导入测试专用的模块
-import { stripJsonComments } from '../utils';
+import { stripJsonComments } from '../config';
 
 function testJsonCommentsHandling() {
     console.log('🧪 测试JSON注释处理功能...\n');

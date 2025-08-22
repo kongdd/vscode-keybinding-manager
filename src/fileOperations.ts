@@ -2,9 +2,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
 import * as glob from 'glob';
-import { KeybindingItem, ExtensionConfig } from './types';
-import { getUserConfigPath, stripJsonComments } from './utils';
-import { getExtensionConfig } from './config';
+import { KeybindingItem, ExtensionConfig, getUserConfigPath, stripJsonComments } from './config';
+
 
 // 安全地读取JSONC文件
 export function readJsoncFile(filePath: string): KeybindingItem[] {

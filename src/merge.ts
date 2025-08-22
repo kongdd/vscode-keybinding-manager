@@ -1,9 +1,7 @@
 import * as fs from 'fs';
-import * as path from 'path';
 import * as vscode from 'vscode';
-import { getKeybindingsPath } from './utils';
 import { getAllKeybindingsFiles, mergeKeybindings } from './fileOperations';
-import { getExtensionConfig } from './config';
+import { getKeybindingsPath, getExtensionConfig } from './config';
 
 // 同步keybindings文件
 export async function syncKeybindings(): Promise<void> {

@@ -1,8 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { getUserConfigPath } from './utils';
-import { getExtensionConfig } from './config';
+import { getUserConfigPath, getExtensionConfig } from './config';
 import { syncKeybindings } from './merge';
 
 // 监听文件变化

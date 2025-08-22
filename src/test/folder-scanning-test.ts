@@ -6,7 +6,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';
 import { getAllKeybindingsFiles } from '../fileOperations';
-import { ExtensionConfig } from '../types';
+import { ExtensionConfig } from '../config';
 
 function testFolderScanning() {
     console.log('🧪 测试文件夹扫描功能...\n');
